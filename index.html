@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DncWeather</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head> 
+
+  <body class="">
+    <div class="header">
+        <nav class="navbar container-fluid navbar-expand-lg" >
+            <div class="container-fluid bg-primary">
+              <a class="navbar-brand text-bg-primary flex-grow-1 fs-3" href="#"><b>DncWeather</b></a>
+              <a class="navbar-brand text-bg-primary p-2" href="#"><b>Endereços</b></a>
+              <a class="navbar-brand text-bg-primary p-2" href="#"><b>Previsão do tempo</b></a>
+            </div>
+          </nav>
+    </div>
+
+
+      <div class="form">
+
+            
+        <div  id="textClodSun container text-center" class="row mb-2">
+          <div class="col-7 text-md-end mt-5 mb-5">
+            <h2><b>Descubra Mais com Precisão: <br>
+               Previsões do Tempo e endereços <br> 
+               em tempo real.</b></h1>
+          </div>
+          <div id="imgClodSun" class="col-5 text-md-start">
+            <img id="imgClodSun" src="./assets/cloudSun.svg" alt="" srcset="">
+          </div>
+        </div>
+
+      <!--FORMULÁRIO-->
+
+  <div id="Formulario" class="form " name="formulario">
+
+    <div class="container ">
+        <!--VIA CEP-->
+
+    <!--iNSIRA SEU NOME-->
+    
+<div id="Block1"
+class="mb-3 row">
+<label for="Nome" 
+class=" col-form-label " ><b>Primeiro Nome</b></label>
+<div class="col-sm-12">
+<input
+name="nome" required
+type="text"
+class="form-control" 
+id="Nome">
+</div>
+</div>
+    <!--E-MAIL-->
+    <div id="Block2"
+class="mb-3 row">
+<label for="eMail" 
+class="col-form-label"><b>E-mail</b></label>
+<div class="col-sm-12">
+<input 
+name="email"
+type="text"
+class="form-control" 
+id="eMail">
+</div>
+</div>
+    <!--digite o CEP-->
+<div id="Block3"
+class="mb-3 row">
+<label for="cep"
+class=" col-form-label"><b>Digite o CEP</b></label>
+<div class="col-sm-12">
+<input type="number"
+name="cep"
+class="form-control" 
+id="cep" 
+value="" >
+</div>
+<div class="col-4">
+
+</div>
+</div>
+
+        <!--OPEN METEO-->
+
+        
+        <div class="container mt-5">
+            <div class="container ">
+                <p> <b>Digite a Latitude e a longitude para saber a previsão</b> </p>
+            </div>
+            <div id="Resp" class="Resp ">
+                  <div class="container text-center bg-light">
+                    <div class="container text-center bg-primary text-light "></div>
+                    <div class="row">
+                      <div class="col">
+                        <input 
+                        type="number"
+                        class="form-control" 
+                        id="Latitude" 
+                        value="">
+                      </div>
+                      <div class="col">
+                        <input 
+                        type="number" 
+                        class="form-control" 
+                        id="Longitude" 
+                        value="">
+                      </div>
+                    </div>
+                  </div>
+        
+            </div>
+        
+        <div class="mb-3 row">
+          
+          
+          <div class="col-12">
+            <button id="button" type="button" class="btn btn-primary mt-3 w-100 " onclick="getAdressByCep();getPrevisao()">Acessar</button>
+            
+           </div>
+          </div>
+         </div>
+        </div>
+    </div>
+        <!--FIM DO FORMULÁRIO-->
+
+    <!--RESULTADO DA BUSCA POR CEP-->
+    
+
+    <div class="row mb-2">
+      <div class="col-7 text-md-end">
+        <h1><b>Resultado da busca por CEP:</b></h1>
+      </div>
+      <div class="col-5 text-md-start">
+        <img src="./assets/location.svg" alt="" srcset="">
+      </div>
+    </div>
+
+    
+
+      <div id="Resposta" class="Resp ">
+
+        <div id="LogBaLo" class="container text-center bg-primary text-light ">
+            <div class="row">
+              <div class="col">
+                Logradouro/nome
+              </div>
+              <div class="col">
+                Bairro/Distrito
+              </div>
+              <div class="col">
+                Localidade/UF
+              </div>
+            </div>
+          </div>
+          <div id="ResLogBaLo" class="container text-center bg-light">
+            <div class="row">
+              <div class="col">
+                <input  
+                    type="text" 
+                    readonly id="Rua"
+                    class="form-control">
+              </div>
+              <div class="col">
+                <input 
+                    type="text" readonly
+                    class="form-control" 
+                    id="Bairro">
+              </div>
+              <div class="col">
+                <input 
+                     type="text" readonly
+                     class="form-control" 
+                     id="cidade">
+              </div>
+            </div>
+          </div>
+
+    </div> 
+            
+
+
+            <!--PREVISÃO DO TEMPO NA REGIÃO-->
+      <div class="container text-center">
+        <div id="Textcloudprev" class="row">
+          <div class="col-8 text-md-end fs-1 text">
+            <h1><b>Previsão do tempo na região:</b></h1>
+          </div>
+          <div class="col-4 text-md-start">
+            <img src="./assets/cloud.svg" alt="" srcset="">
+          </div>
+        </div>
+        <div class="container">
+            <div class="border col-8 RespPrev" id="resposta"> 
+                <input id="Prevres"  type="text" readonly> 
+            </div>
+          </div>
+      </div>
+  </div>
+      <div class="footer d-flex justify-content-end bg-primary">
+            <div class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                  
+                  <a class="navbar-brand text-bg-primary" href="#">Termos de uso/</a>
+                  <a class="navbar-brand text-bg-primary" href="#">Politica de Privacidade</a>
+                </div>
+        </div>
+      </div>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
+

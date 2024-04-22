@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    align-items: center;
+    max-width: 100%;
+    padding-top: 0 !important;
+    
+}
+body{
+    background-color: #F2F2F2 !important;
+}
+
+#imgClodSun{
+    width: 100px;
+    margin-bottom: 30px;
+}
+#Formulario{
+    background-color: #fff;
+    width: 600px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 15px;
+    margin-bottom: 150px;
+    
+}
+#Block1{
+    margin: auto;
+    width: 550px;
+    
+}
+#Block2{
+    margin: auto;
+    width: 550px;
+    
+}
+#Block3{
+    margin: auto;
+    width: 550px;
+    
+}
+#button{
+    width: 530px !important;
+    margin-left: 12px;
+    margin-top: 66px !important;
+}
+
+#Formulario input{
+    
+    background-color: #F2F2F2;
+}
+h1{
+    text-align: end;
+}
+#Resposta{
+    
+    font-size: 23px;
+    margin-bottom: 60px;
+}
+#Resposta .col{
+    text-align: start;
+}
+#LogBaLo{
+    border-radius: 10px  10px 0 0;
+    background-color: #ffffff;
+    width: 800px;
+}
+#ResLogBaLo{
+    background-color: #ffffff;
+    border-radius: 0 0 10px 10px;
+    width: 800px;
+}
+
+#ResLogBaLo input{
+    border: none;
+}
+
+.col-12{
+
+    margin: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    
+}
+
+.RespPrev{
+    margin-bottom: 50px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 150px;
+    margin-top: 30px;
+    width: 800px;
+}
+
+
+    
+
+
+
+
+
